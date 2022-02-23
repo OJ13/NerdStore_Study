@@ -1,0 +1,8 @@
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\bin\Debug\netcoreapp3.1\NSE.Core.deps.json
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\bin\Debug\netcoreapp3.1\NSE.Core.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\bin\Debug\netcoreapp3.1\NSE.Core.pdb
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\obj\Debug\netcoreapp3.1\NSE.Core.AssemblyInfoInputs.cache
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\obj\Debug\netcoreapp3.1\NSE.Core.AssemblyInfo.cs
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\obj\Debug\netcoreapp3.1\NSE.Core.csproj.CoreCompileInputs.cache
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\obj\Debug\netcoreapp3.1\NSE.Core.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\building blocks\NSE.Core\obj\Debug\netcoreapp3.1\NSE.Core.pdb
