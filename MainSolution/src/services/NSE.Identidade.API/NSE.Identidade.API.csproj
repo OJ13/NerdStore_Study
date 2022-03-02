@@ -23,7 +23,6 @@
     <Folder Include="Data\" />
     <Folder Include="Configuration\" />
     <Folder Include="Extensions\" />
-    <Folder Include="Models\" />
   </ItemGroup>
 
 
