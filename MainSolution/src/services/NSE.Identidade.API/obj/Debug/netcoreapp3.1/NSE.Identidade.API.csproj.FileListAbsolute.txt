@@ -13,8 +13,6 @@ E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\NSE.Identidade.API.runtimeconfig.dev.json
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\NSE.Identidade.API.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\NSE.Identidade.API.pdb
-E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.csproj.CoreCompileInputs.cache
-E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.MvcApplicationPartsAssemblyInfo.cache
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.pdb
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.genruntimeconfig.cache
@@ -67,10 +65,13 @@ E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.MvcApplicationPartsAssemblyInfo.cs
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.csproj.CopyComplete
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.csproj.CoreCompileInputs.cache
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.MvcApplicationPartsAssemblyInfo.cs
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Identidade.API\obj\Debug\netcoreapp3.1\NSE.Identidade.API.MvcApplicationPartsAssemblyInfo.cache
