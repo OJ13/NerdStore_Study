@@ -10,6 +10,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace NSE.Identidade.API.Controllers
 {    
@@ -79,10 +80,20 @@ namespace NSE.Identidade.API.Controllers
             return CustomResponse();
         }
 
+        #region Métodos Privados
         private async Task<UsuarioRespostaLogin> GerarJwt(string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
             var claims = await _userManager.GetClaimsAsync(user);
+
+            var identityClaims = await ObterClaimsUsuario(user, claims);
+            var encodedToken = CodificarToken(identityClaims);
+
+            return ObterRespostaToken(user, claims, encodedToken);
+        }
+
+        private async Task<ClaimsIdentity> ObterClaimsUsuario(IdentityUser user, ICollection<Claim> claims)
+        {
             var userRoles = await _userManager.GetRolesAsync(user);
 
             claims.Add(new Claim(type: JwtRegisteredClaimNames.Sub, value: user.Id));
@@ -99,6 +110,11 @@ namespace NSE.Identidade.API.Controllers
             var identityClaims = new ClaimsIdentity();
             identityClaims.AddClaims(claims);
 
+            return identityClaims;
+        }
+
+        private string CodificarToken(ClaimsIdentity identityClaims)
+        {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
 
@@ -113,7 +129,12 @@ namespace NSE.Identidade.API.Controllers
 
             var encodedToken = tokenHandler.WriteToken(token);
 
-            var response = new UsuarioRespostaLogin
+            return encodedToken;
+        }
+
+        private UsuarioRespostaLogin ObterRespostaToken(IdentityUser user, ICollection<Claim> claims, string encodedToken)
+        {
+            return new UsuarioRespostaLogin
             {
                 AccessToken = encodedToken,
                 ExpiresIs = TimeSpan.FromHours(_appSettings.ExpiracaoHoras).TotalSeconds,
@@ -124,10 +145,10 @@ namespace NSE.Identidade.API.Controllers
                     Claims = claims.Select(c => new UsuarioClaim { Type = c.Type, Value = c.Value })
                 }
             };
-
-            return response;
         }
 
         private static long ToUnixEpochDate(DateTime date) => (long)Math.Round((date.ToUniversalTime() - new DateTimeOffset(year: 1970, month: 1, day: 1, hour: 0, minute: 0, second: 0, offset: TimeSpan.Zero)).TotalSeconds);
+        #endregion
+
     }
 }
