@@ -1,0 +1,8 @@
+.vscode
+.downloads
+.vs
+.suo
+bin
+obj
+/.vs/
+*.csproj
