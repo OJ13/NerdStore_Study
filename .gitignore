@@ -4,5 +4,6 @@
 .suo
 bin
 obj
+/obj
 /.vs/
 *.csproj
