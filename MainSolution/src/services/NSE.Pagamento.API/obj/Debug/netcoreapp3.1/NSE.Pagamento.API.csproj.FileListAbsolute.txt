@@ -17,3 +17,4 @@ E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Pagamento.API\obj\Debug\netcoreapp3.1\NSE.Pagamento.API.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Pagamento.API\obj\Debug\netcoreapp3.1\NSE.Pagamento.API.pdb
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Pagamento.API\obj\Debug\netcoreapp3.1\NSE.Pagamento.API.genruntimeconfig.cache
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\services\NSE.Pagamento.API\obj\Debug\netcoreapp3.1\NSE.Pagamento.API.csprojAssemblyReference.cache

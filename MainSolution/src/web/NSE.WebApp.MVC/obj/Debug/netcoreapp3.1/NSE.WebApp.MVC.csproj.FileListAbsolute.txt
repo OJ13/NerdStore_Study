@@ -351,3 +351,6 @@ E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\NSE.WebApp.MVC.dll
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\NSE.WebApp.MVC.pdb
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\NSE.WebApp.MVC.genruntimeconfig.cache
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Identidade\Login.cshtml.g.cs
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Identidade\Registro.cshtml.g.cs
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
