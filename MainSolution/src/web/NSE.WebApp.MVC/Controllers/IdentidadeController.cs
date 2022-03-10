@@ -28,7 +28,7 @@ namespace NSE.WebApp.MVC.Controllers
             if (!ModelState.IsValid)
                 return View(usuarioRegistro);
 
-            var resposta = _autenticacaoService.Registro(usuarioRegistro);
+            var resposta = await _autenticacaoService.Registro(usuarioRegistro);
 
             if (false) return View(usuarioRegistro);
 
@@ -50,7 +50,7 @@ namespace NSE.WebApp.MVC.Controllers
             if (!ModelState.IsValid)
                 return View(usuarioLogin);
 
-            var resposta = _autenticacaoService.Login(usuarioLogin);
+            var resposta = await _autenticacaoService.Login(usuarioLogin);
 
             if (false) return View(usuarioLogin);
 
