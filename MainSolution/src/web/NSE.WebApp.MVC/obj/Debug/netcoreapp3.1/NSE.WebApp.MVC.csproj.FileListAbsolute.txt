@@ -354,3 +354,11 @@ E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Identidade\Login.cshtml.g.cs
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Identidade\Registro.cshtml.g.cs
 E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Projetos\NET\Arquitetura\Distriuida\NerdStore_Study\MainSolution\src\web\NSE.WebApp.MVC\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
