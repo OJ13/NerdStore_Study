@@ -13,7 +13,7 @@ namespace NSE.WebApp.MVC.Services
         Task<UsuarioRespostaLogin> Registro(UsuarioRegistro usuarioRegistro);
     }
 
-    public class AutenticacaoService : IAutenticacaoService
+    public class AutenticacaoService : Service, IAutenticacaoService
     {
         private readonly HttpClient _httpClient;
         public AutenticacaoService(HttpClient httpClient)
@@ -29,11 +29,19 @@ namespace NSE.WebApp.MVC.Services
                 );
 
             var response = await _httpClient.PostAsync("https://localhost:44334/api/identidade/autenticar", loginContent);
-
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             };
+
+
+            if (!TratarErrosResponse(response))
+            {
+                return new UsuarioRespostaLogin
+                {
+                    ResponseResult = JsonSerializer.Deserialize<ResponseResult>(await response.Content.ReadAsStringAsync(), options)
+                };
+            }
 
             return JsonSerializer.Deserialize<UsuarioRespostaLogin>(await response.Content.ReadAsStringAsync(), options);
         }
@@ -47,6 +55,20 @@ namespace NSE.WebApp.MVC.Services
                 );
 
             var response = await _httpClient.PostAsync("", registroContent);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+
+
+            if (!TratarErrosResponse(response))
+            {
+                return new UsuarioRespostaLogin
+                {
+                    ResponseResult = JsonSerializer.Deserialize<ResponseResult>(await response.Content.ReadAsStringAsync(), options)
+                };
+            }
+
 
             return JsonSerializer.Deserialize<UsuarioRespostaLogin>(await response.Content.ReadAsStringAsync());
         }
