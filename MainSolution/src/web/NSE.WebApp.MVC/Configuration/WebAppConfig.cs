@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using NSE.WebApp.MVC.Extensions;
 
 namespace NSE.WebApp.MVC.Configuration
 {
@@ -28,6 +29,8 @@ namespace NSE.WebApp.MVC.Configuration
             app.UseRouting();
 
             app.UseAutenticationConfiguration();
+
+            app.UseMiddleware<ExceptionMiddleware>();
             
             app.UseEndpoints(endpoints =>
             {
