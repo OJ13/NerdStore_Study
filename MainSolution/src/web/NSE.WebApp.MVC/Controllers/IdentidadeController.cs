@@ -71,6 +71,8 @@ namespace NSE.WebApp.MVC.Controllers
         [Route("sair")]
         public async Task<IActionResult> Logout(UsuarioLogin usuarioLogin)
         {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
             return RedirectToAction(actionName: "Index", controllerName: "Home");
         }
 
