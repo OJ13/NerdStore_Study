@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NSE.Catalogo.API.Configuration;
+using NSE.WebApi.Core.Identidade;
 
 namespace NSE.Catalogo.API
 {
@@ -30,6 +31,7 @@ namespace NSE.Catalogo.API
             services.AddApiConfiguration(Configuration);
             services.AddSwaggerConfiguration();
             services.RegisterServices();
+            services.AddJwtConfiguration(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
