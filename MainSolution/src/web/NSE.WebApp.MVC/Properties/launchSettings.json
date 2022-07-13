@@ -8,30 +8,30 @@
     }
   },
   "profiles": {
-    //"IIS - Development": {
-    //  "commandName": "IISExpress",
-    //  "launchBrowser": true,
-    //  "launchUrl": "swagger",
-    //  "environmentVariables": {
-    //    "ASPNETCORE_ENVIRONMENT": "Development"
-    //  }
-    //},
-    //"IIS - Stagging": {
-    //  "commandName": "IISExpress",
-    //  "launchBrowser": true,
-    //  "launchUrl": "swagger",
-    //  "environmentVariables": {
-    //    "ASPNETCORE_ENVIRONMENT": "Stagging"
-    //  }
-    //},
-    //"IIS - Production": {
-    //  "commandName": "IISExpress",
-    //  "launchBrowser": true,
-    //  "launchUrl": "swagger",
-    //  "environmentVariables": {
-    //    "ASPNETCORE_ENVIRONMENT": "Production"
-    //  }
-    //},
+    "IIS - Development": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS - Stagging": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Stagging"
+      }
+    },
+    "IIS - Production": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
+    },
     "SelfHosting - NSE.Catalogo.API": {
       "commandName": "Project",
       "launchBrowser": true,
