@@ -23,16 +23,7 @@ namespace NSE.Catalogo.API.Controllers
         [HttpGet("catalogo/produtos")]
         public async Task<IEnumerable<Produto>> Index()
         {
-            try
-            {
-                return await _produtoRepository.ObterTodos();
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Erro ao buscar itens");
-            }
-            
+            return await _produtoRepository.ObterTodos();   
         }
 
         [ClaimsAuthorize("Catalogo", "Ler")]
