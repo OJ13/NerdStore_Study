@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
 using MediatR;
+using NSE.Clientes.API.Data.Repository;
 using NSE.Clientes.API.Models;
 using NSE.Core.Messages;
 using System.Threading;
@@ -10,6 +11,11 @@ namespace NSE.Clientes.API.Application.Commands
     public class ClienteCommandHandler : CommandHandler,
         IRequestHandler<RegistrarClienteCommand, ValidationResult>
     {
+        private readonly IClienteRepository _clienteRepository;
+        public ClienteCommandHandler(IClienteRepository clienteRepository)
+        {
+            _clienteRepository = clienteRepository;
+        }
         public async Task<ValidationResult> Handle(RegistrarClienteCommand message, CancellationToken cancellationToken)
         {
             if (!message.EhValido())
@@ -17,16 +23,17 @@ namespace NSE.Clientes.API.Application.Commands
 
             var cliente = new Cliente(message.Id, message.Nome, message.Email, message.Cpf);
 
-            //Validacoes de negocio
+            var clienteExistente = await _clienteRepository.ObterPorCpf(cliente.Cpf.Numero);
 
-            //Persistir no banco
-            if (true) //ex.: regra de duplicidade
+            if (clienteExistente != null)
             {
                 AdicionarErro("Esse Cpf já esta em uso");
                 return ValidationResult;
             }
 
-            return message.ValidationResult;
+            _clienteRepository.Adicionar(cliente);
+
+            return await PersistirDados(_clienteRepository.UnitOfWork);
         }
     }
 }
