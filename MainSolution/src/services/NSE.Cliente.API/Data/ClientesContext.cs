@@ -5,14 +5,18 @@ using NSE.Clientes.API.Models;
 using System.Linq;
 using NSE.Core.Mediator;
 using NSE.Core.DomainObjects;
+using FluentValidation.Results;
+using NSE.Core.Messages;
 
 namespace NSE.Clientes.API.Data
 {
     public sealed class ClientesContext : DbContext, IUnitOfWork
     {
-        private IMediatorHandler _mediatorHandler;
-        public ClientesContext(DbContextOptions<ClientesContext> options): base(options) 
+        private readonly IMediatorHandler _mediatorHandler;
+        public ClientesContext(DbContextOptions<ClientesContext> options,
+            IMediatorHandler mediatorHandler) : base(options) 
         {
+            _mediatorHandler = mediatorHandler;
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
@@ -21,6 +25,9 @@ namespace NSE.Clientes.API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Ignore<ValidationResult>();
+            modelBuilder.Ignore<Event>();
+
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                         e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.SetColumnType(value: "varchar(100)");

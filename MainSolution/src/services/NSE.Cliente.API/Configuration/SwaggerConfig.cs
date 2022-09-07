@@ -13,8 +13,8 @@ namespace NSE.Clientes.API.Configuration
             {
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
-                    Title = "NerdStore Enterprise Catalogo API",
-                    Description = "Api de Catálogo, projeto de Estudo Ecommerce",
+                    Title = "NerdStore Enterprise Cleinte API",
+                    Description = "Api de Cliente, projeto de Estudo Ecommerce",
                     Contact = new OpenApiContact() { Name = "Osmar Junior", Email = "osmarfsjunior@outlook.com" },
                     License = new OpenApiLicense()
                     {
