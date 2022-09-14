@@ -11,7 +11,7 @@
     "IIS - Development": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "vitrine",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -19,7 +19,7 @@
     "IIS - Stagging": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "vitrine",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Stagging"
       }
@@ -27,7 +27,7 @@
     "IIS - Production": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "vitrine",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Production"
       }
@@ -35,7 +35,7 @@
     "SelfHosting - NSE.Catalogo.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "vitrine",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
