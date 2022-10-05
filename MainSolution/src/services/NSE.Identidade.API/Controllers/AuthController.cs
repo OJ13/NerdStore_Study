@@ -13,6 +13,8 @@ using System.Linq;
 using System.Collections.Generic;
 using NSE.WebApi.Core.Model;
 using NSE.WebApi.Core.Controllers;
+using NSE.Core.Messages.Integration;
+using EasyNetQ;
 
 namespace NSE.Identidade.API.Controllers
 {    
@@ -22,12 +24,17 @@ namespace NSE.Identidade.API.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly AppSettings _appSettings;
-
-        public AuthController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings)
+        private IBus _bus;
+        public AuthController(
+            SignInManager<IdentityUser> signInManager, 
+            UserManager<IdentityUser> userManager, 
+            IOptions<AppSettings> appSettings,
+            IBus bus)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _appSettings = appSettings.Value;
+            _bus = bus;
         }
         
         [HttpPost("nova-conta")]
@@ -47,7 +54,8 @@ namespace NSE.Identidade.API.Controllers
 
             if (result.Succeeded)
             {
-                //await _signInManager.SignInAsync(user, isPersistent: false);
+                var sucesso = await RegistrarCliente(usuarioRegistro);
+
                 return CustomResponse(await GerarJwt(usuarioRegistro.Email));
             }
 
@@ -83,6 +91,20 @@ namespace NSE.Identidade.API.Controllers
         }
 
         #region Métodos Privados
+
+        private async Task<ResponseMessage> RegistrarCliente(UsuarioRegistro usuarioRegistro)
+        {
+            var usuario = await _userManager.FindByEmailAsync(usuarioRegistro.Email);
+            
+            var usuarioRegistrado = new UsuarioRegistradoIntegrationEvent(Guid.Parse(usuario.Id), usuarioRegistro.Nome, usuarioRegistro.Email, usuarioRegistro.Cpf);
+
+            _bus = RabbitHutch.CreateBus(connectionString: "host=localhost:5672");
+
+            var sucesso = await _bus.Rpc.RequestAsync<UsuarioRegistradoIntegrationEvent, ResponseMessage>(usuarioRegistrado);
+
+            return sucesso;
+        }
+
         private async Task<UsuarioRespostaLogin> GerarJwt(string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
